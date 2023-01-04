@@ -7,7 +7,7 @@ const Homepage = () => {
   function handleSubmit(event) {
     event.preventDefault();
     axios
-      .post("https://example.com/api/endpoint", {
+      .post("https://fakestoreapi.com/users", {
         email: email,
       })
       .then((response) => console.log(response))
