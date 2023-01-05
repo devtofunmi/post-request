@@ -11,13 +11,7 @@ const Homepage = () => {
     event.preventDefault();
     axios
       .post(
-        `https://api.prettybio.com/auth/signup?username=${userName}&password=${password}`,
-        {
-          email: email,
-          userName: userName,
-          password: password,
-          confirmPassword: confirmPassword,
-        }
+        `https://api.prettybio.com/auth/signup?username=${userName}&password=${password}`
       )
       .then((response) => console.log(response))
       .catch((error) => console.error(error));
