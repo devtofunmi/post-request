@@ -10,12 +10,15 @@ const Homepage = () => {
   function handleSubmit(event) {
     event.preventDefault();
     axios
-      .post("https://api.prettybio.com/auth/signup", {
-        email: email,
-        userName: userName,
-        password: password,
-        confirmPassword: confirmPassword,
-      })
+      .post(
+        `https://api.prettybio.com/auth/signup?username:${userName}&password:${password}`,
+        {
+          email: email,
+          userName: userName,
+          password: password,
+          confirmPassword: confirmPassword,
+        }
+      )
       .then((response) => console.log(response))
       .catch((error) => console.error(error));
   }
